@@ -1,33 +1,87 @@
 {% extends 'shop/layouts/main.html' %}
+{% load static %}
+{% block header %}
+<style>
+    .bg-img{
+       background-image: url({% static 'images/Untitled dssesign.png' %});3
+       background-size: cover; 
+       background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+
+    .centered-div {
+            text-align: center; /* Center text horizontally */
+            margin-top: 100px; /* Adjust top margin as needed */
+        }
+    }
+    
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="container" style="margin-top:70px;">
-    <div class="row">
-        <div class="col-12">
-            <h4 class="mb-3">User Login</h4>
-            <hr style="border-color: #b8bfc2;">
-            {% include 'shop/inc/message.html' %}
-        </div>
-    </div> 
-    <section class="py-4 my-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <form method="post" action="">
-                        {% csrf_token %}
-                        <div class="mb-4">
-                            <label for="" class="from-label">User Name</label>
-                            <input type="text" name="username" id="username" class="from-control" placeholder="Enter User Nmae">
-                        </div>
-                        <div class="mb-4">
-                            <label for="" class="from-label">Password</label>
-                            <input type="password" name="password" id="password" class="from-control" placeholder="Enter Password">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand" href="{% url 'home' %}">LOGO</a>
+    </div>
+  </nav>
+<div class="bg-img h-100">
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mb-3">User Login</h4>
+                <hr style="border-color: #b8bfc2;">
+                {% include 'shop/inc/message.html' %}
+            </div>
+        </div> 
+        <section class="py-4 my-5 ">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 centered-div"> 
+                      
+                        <div class="card shadow-sm rounded-3  border-0 ">
+                            <div class="card-body p-lg-5">
+                              <p class="fs-4 text-primary fw-bold pb-3 m-0  text-capitalize">Login</p>
+                           <form method="post" action="">
+                                    {% csrf_token %}
+                                    <div class="mb-4">
+                                        <p  class=" m-0 text-primary text-start from-label">User Name</p>
+                                        <input class="form-control"  type="text" name="username" id="username"  placeholder="Enter User Nmae">
+                                    </div>
+                                    <div class="mb-4">
+                                        <p  class=" m-0 text-primary text-start from-label">Password</p>
+                                        <input class="form-control"  type="password" name="password" id="password"  placeholder="Enter Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                                </form>
+                              <p class="text-muted m-0 small m-0 pt-4 text-center pb-2">Don’t you have an account? <a href="" class="text-info text-decoration-none">Sign Up</a> </p>
+                            </div>
+                    
+                          </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+    
+                        
+
+                                <!-- <form method="post" action="">
+                                    {% csrf_token %}
+                                    <div class="mb-4">
+                                        <label for="" class="from-label">User Name</label>
+                                        <input type="text" name="username" id="username" class="from-control" placeholder="Enter User Nmae">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="" class="from-label">Password</label>
+                                        <input type="password" name="password" id="password" class="from-control" placeholder="Enter Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </form> -->
+                             
+                
+        </section>
+    </div>
 </div>
 {% endblock %}
    

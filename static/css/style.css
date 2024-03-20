@@ -1,12 +1,12 @@
 
-html{
+/* html{
     font-size: 14px;
-} 
+}  */
 
 
-body{
+/* body{
     font-family: 'Noto Sans',sans-serif;
-}
+} */
 
 
 a {
@@ -14,6 +14,9 @@ a {
 }
 
 
+.margin-head{
+        margin-top: 3.4rem !important;
+}
 
 
 

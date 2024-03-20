@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'prakash_project.wsgi.application'
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'shopkart_project', #db name
 #         'USER': 'root',
-#         'PASSWORD': 'user@123',
-#         'HOST': '127.0.0.1',
+#         'PASSWORD': 'Secret@123',
+#         'HOST': 'UTOC-NB-229',
 #         'PORT': '3306',
 #     }
 # }

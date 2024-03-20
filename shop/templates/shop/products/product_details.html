@@ -4,9 +4,117 @@ index | page
 {% endblock title %}
 
 {% block content %}
+{% include 'shop/inc/navbar.html' %}
+
 <section class="bg-light py-4 my-5" style="min-height:600px;">
     <div class="container">
         <div class="row">
+            <div class="col-lg-5">
+                <!-- {% if products.trending %}     
+                <div class="hot">Hot</div>
+                {% endif %} -->
+            <img src="{{products.product_image.url}}" class="w-100" alt="{{products}}">
+            <div class="d-flex justify-content-between mt-3">
+                <button class="btn btn-outline-danger  w-100 btn-lg me-2"><i class="fa fa-heart"></i> WHISLIST</button>
+                <button class="btn btn-info text-white w-100 btn-lg">BOOK NOW</button>
+            </div>
+            
+            </div>
+            <div class="col-lg-7">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="">
+                            <p class="m-0 text-info ">{{products | upper}}</p>
+                            <h1 class="text-primary fw-bold fs-4 m-0">{{products.vendor}}</h1>
+                            <hr class="border">
+                            <p class="m-0 text-warning fw-bold fs-4">Rs.{{products.selling_price}} <span class="fs-6 fw-normal small text-muted mx-1 text-decoration-line-through">Rs.{{products.original_price}}</span> </p>
+                            <p class="small text-muted">(inclusive of all taxes)</p>
+                        </div>
+                        <div class="card border rounded-3 mt-4 bg-light">
+                            <div class="card-body">
+                                <div class="row  justify-content-center">
+                                    <div class="col-4 text-center my-auto border-end">
+                                        <i class="bi bi-check-circle fs-3"></i>
+                                       <p class="m-0 text-primary small">Easy Book</p>
+                                    </div>
+                                    <div class="col-4 text-center my-auto border-end">
+                                        <i class="bi bi-people-fill fs-3"></i>
+                                       <p class="m-0 text-primary small">Trust ours</p>
+                                    </div>
+                                    <div class="col-4 text-center my-auto">
+                                        <i class="bi bi-cash-coin fs-3"></i>
+                                        <p class="m-0 text-primary small">Easy refund</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border  mt-3">
+                            <div class="card-header bg-white">
+                                <p class=" text-primary  fw-bold m-0" id="">Product Description</p>
+                            </div>
+                              <div class="card-body">
+                                  <div class="text-muted "><p>{{products.description}}</p></div>
+                              </div>
+                          </div>
+                          <div class="card border  mt-3">
+                            <div class="card-header bg-white">
+                                <p class=" text-primary  fw-bold m-0" id="">Shop  Address</p>
+                            </div>
+                              <div class="card-body">
+                                  <div class="text-muted "><p>{{products.description}}</p></div>
+                              </div>
+                          </div>
+                          <div class="card border  mt-3 ">
+                            <div class="card-header bg-white">
+                                <p class="text-primary  fw-bold m-0 " id="">Package</p>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush ">
+                             
+                             <li class="list-group-item border-light">
+                                 <div class="row">
+                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">Hair Cut</p>
+                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
+                                         Yes
+                                     </p>
+                                 </div>
+                             </li>
+                             
+                             <li class="list-group-item border-light">
+                                 <div class="row">
+                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">face Wash</p>
+                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
+                                         Yes
+                                     </p>
+                                 </div>
+                             </li>
+                             
+                             <li class="list-group-item border-light">
+                                 <div class="row">
+                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">Head massage</p>
+                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
+                                         No
+                                     </p>
+                                 </div>
+                             </li>
+                             
+                             <li class="list-group-item border-light">
+                                 <div class="row">
+                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">Hair Wash</p>
+                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
+                                         Yes
+                                     </p>
+                                 </div>
+                             </li>
+                              
+                         </ul>
+                     </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
             <div class="col-12">
                 <h4 class="mb-3"> {{products}} Details</h4>
                 <hr style="border-color:#b8bfc2">
@@ -50,7 +158,7 @@ index | page
                 </div> 
            </div>
             
-        </div>
+        </div> -->
     </div>
 </section>
 <script>
