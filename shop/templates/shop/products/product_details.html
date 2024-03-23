@@ -2,17 +2,392 @@
 {% block title %}
 index | page
 {% endblock title %}
+{% load static %}
 
 {% block content %}
 {% include 'shop/inc/navbar.html' %}
 
-<section class="bg-light py-4 my-5" style="min-height:600px;">
-    <div class="container">
-        <div class="row">
+<section class="bg-light " >
+        <div class="">
+            <div class="container">
+                <div class="">
+                    <div class="row mt-4">
+                        <div class="col-lg-5 pe-lg-2">
+                            <div class="mb-3">
+                                <div id="carouselExampleIndicators" class="carousel slide">
+                                  <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1" class=""></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" class="active" aria-current="true"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+                                  </div>
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item cursor-pointer pop" id="pop_1">
+                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                    </div>
+                                    <div class="carousel-item cursor-pointer pop" id="pop_2">
+                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                    </div>
+                                    <div class="carousel-item cursor-pointer pop" id="pop_3">
+                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                    </div>
+                                    <div class="carousel-item cursor-pointer pop" id="pop_4">
+                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                    </div>
+                                    <div class="carousel-item cursor-pointer pop active" id="pop_5">
+                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                    </div>
+                                    <div class="carousel-item cursor-pointer pop" id="pop_6">
+                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                    </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7 ps-lg-2 ">
+                                <div class="card border-0 shadow-sm  rounded-3" style="min-height: 455px;">
+                                    <div class="card-header bg-white p-4">
+                                        <h1 class="fw-bold text-primary m-0 fs-4 pt-1">{{products | upper}}</h1>
+                                        <p class="text-info m-0 pt-1 fw-bold"> {{products.vendor}}</p>
+                                        <hr class="border">
+                                        <p class="m-0 text-warning fw-bold fs-4">Rs.{{products.selling_price}} <span class="fs-6 fw-normal small text-muted mx-1 text-decoration-line-through">Rs.{{products.original_price}}</span> </p>
+                                        <p class="small text-muted m-0">(inclusive of all taxes)</p>
+                                        <!-- <div class="mt-3">
+                                            <i class="bi bi-star-fill rating_star mx-1"></i>
+                                            <i class="bi bi-star-fill rating_star mx-1"></i>
+                                            <i class="bi bi-star-fill rating_star mx-1"></i>
+                                        </div> -->
+                                    </div>
+                                    <div class="card-body px-4">
+                                        <div class="mt-1">
+                                            <p class="my-1 text-muted small col-10"> 2nd Floor, Flat No: F-3/B,  near Bank of Baroda, Sector 10,   Vashi,
+                                                <br> Navi Mumbai, MAHARASHTRA  - 400703 </p>
+                                           <p class="">  <a href="tel:+919659455455" class="text-decoration-none text-muted small ">+919659455455 | vashi@hearzap.com</a> </p>
+                                           <p class="m-0">
+                                            <span class="text-success xsmall m-0  fw-bold text-capitalize">Open</span>
+                                            <span class="text-muted m-0 xsmall  "><i class="bi bi-dot"></i>Closes By 7 Pm</span>
+                                           </p>
+                                     </div>
+                                    </div>
+                                    <div class="card-footer bg-white px-4 ">
+                                        <div class="d-lg-flex justify-content-between">
+                                            <div class="d-flex text-center justify-content-center">
+                                                <div class="">
+                                                    <a href="tel:+919659455455">
+                                                        <img src="{% static 'images/hz_call_icon.svg' %} " class="mx-3" alt="call icon" >
+                                                    </a>
+                                                    <p class="text-info text-center m-1 small text-capitalize">Call</p>     
+                                                </div>
+                                                <div style="cursor: pointer;">
+                                                    <img src="{% static 'images/hz_halffilledstar_icon.svg' %} "  class="mx-3" alt="direction icon" >
+                                                    <p class="text-info text-center m-1 small text-capitalize">Directions</p>
+                                                </div>
+                                                <div style="cursor: pointer;">
+                                                    <img src="{% static 'images/hz_halffilledstar_icon.svg' %} " data-bs-toggle="modal" data-bs-target="#exampleModal" class="mx-3" alt="star image" >
+                                                    <p class="text-info text-center m-1 small text-capitalize">Review</p>
+                                                </div>
+                                                <div style="cursor: pointer;">
+                                                    <img src="{% static 'images/hz_halffilledstar_icon.svg' %} " data-bs-toggle="modal" data-bs-target="#exampleModal" class="mx-3" alt="star image" >
+                                                    <p class="text-info text-center m-1 small text-capitalize">Review</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="my-auto text-center pt-2 pt-lg-0">
+                                                <a href="" type="button" class="btn btn-info btn-lg text-white w-100">BOOK APPOINTMENT</a>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="row row-cols-1 row-cols-lg-3 mt-4">
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 h-100">
+                                <div class="card-header bg-white">
+                                    <p class="text-primary fs-5 fw-bold mb-1">Working Hours</p>
+                                </div>
+                                <div class="card-body pe-0 ps-2">
+                                    <table class="border-0 text-muted small w-100">
+                                        <tbody>
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Monday</span></td>
+                                            <td class=" p-1 small">10:00 am - 01:00 pm | 01:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Tuesday</span></td>
+                                            <td class=" p-1 small">10:00 am - 01:00 pm | 01:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Wednesday</span></td>
+                                            <td class=" p-1 small">10:00 am - 01:00 pm | 01:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Thursday</span></td>
+                                            <td class=" p-1 small">10:00 am - 01:00 pm | 01:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Friday</span></td>
+                                            <td class=" p-1 small">10:00 am - 01:00 pm | 01:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Saturday</span></td>
+                                            <td class=" p-1 small">10:00 am - 01:00 pm | 01:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1 small"><span class="fw-bold">Sunday</span></td>
+                                            <td class=" p-1 small">Closed</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 h-100">
+                                <div class="card-header bg-white">
+                                    <p class="text-primary fs-5 fw-bold mb-1">Services</p>
+                                 </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hearing Loss Assessments</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Basic Hearing Checkup</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Advanced Audiogram Tests</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Audiologist Consultations</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Experience Audio Rooms</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Shop Hearing Aids/Accessories</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hearing Aids Trials</li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hearing Aids Service </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 h-100">
+                              <div class="card-header bg-white">
+                                  <p class="text-primary fs-5 fw-bold mb-1">Other Features</p>
+                                </div>
+                                <div class="card-body">
+                                <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Two Wheeler/Four Wheeler Parkings</li>
+                                </ul>
+                                <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Elderly Patients Friendly</li>
+                                </ul>
+                                <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Regional Language Speaking Staffs</li>
+                                </ul>
+                                <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Waiting Periods For Walk-Ins (Max 10 Mins)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                    <div class="row  mt-lg-4 mt-3">
+                        <div class="col-lg-8 pe-0">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.749385224737!2d103.70579077567913!3d1.3263142616495764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da055f8fffffff%3A0x75d06febe3272878!2sUTOC%20Engineering%20Pte%20Ltd!5e0!3m2!1sen!2ssg!4v1711181919215!5m2!1sen!2ssg" width="850" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="col-lg-4  ps-lg-0">
+                            <div class="card alert-info shadow-sm border-0 rounded-3 position-relative">
+                                <div class="card-body p-4">
+                                    <h2 class="text-primary fs-5 fw-bold  text-center text-capitalize">Book your store visit</h2>
+                                    <div class="py-3">
+                                        <p class="mb-1 fw-bold text-info ">VASHI</p>
+                                        <p class="m-0 small text-muted ">
+                                            2nd Floor, Flat No: F-3/B near Bank of Baroda, Sector 10  Navi Mumbai - MAHARASHTRA - 400703
+                                        </p>
+                                        <p class="pt-3 m-0">
+                                            <a href="tel:+919659455455" class="text-decoration-none text-muted small  ">+919659455455</a>
+                                           </p>
+                                           <p class="m-0">
+                                            <a href="mailto:vashi@ss.com" class="text-decoration-none text-muted small  ">vashi@sss.com</a>
+                                           </p>
+                                    </div>
+                                    <img src="{% static 'images/hz_rightleaf_icon.svg' %} " class="position-absolute top-0 end-0" alt="right curve" >
+                                    <img src="{% static 'images/hz_leftleaf_icon.svg' %} " class="position-absolute top-0 end-0" alt="left curve" >
+                                    <div class="d-grid gap-2">
+                                        <a href="" type="button" class="btn btn-info text-white fw-bold mt-3">BOOK APPOINTMENT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="mt-4 d-none d-lg-block">
+                    <img src="{% static 'images/Home services at your doorstep.png' %} " class="img-fluid w-100" alt="shopping banner image" >
+                </div>
+                <section class="  mt-3 d-lg-none">
+                    <div class="">
+                        <img src="{% static 'images/Home services at your doorstep.png' %} " class="img-fluid w-100" alt="Smiley" >
+                    </div>
+                </section>
+                
+                <div class="my-3 pb-5 d-lg-none">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner alert-info rounded-corner">
+                            <div class="position-relative">
+                                <div class="py-4 px-2">
+                                    <div>
+                                        <p class="mb-1 text-primary fw-bold">Happy Customers</p>
+                                        <p class="m-0 text-primary small">1 Million+ satisfied customers</p>
+                                    </div>
+                                    <div class="carousel-item  active ">
+                                        <div>
+                                            <div class="mt-5 mb-3">
+                                                <i class="bi bi-star-fill rating_star"></i>
+                                                <i class="bi bi-star-fill rating_star"></i>
+                                                <i class="bi bi-star-fill rating_star"></i>
+                                                <i class="bi bi-star-fill rating_star"></i>
+                                                <i class="bi bi-star-fill rating_star"></i>
+                                            </div>
+                                            <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
+                                            <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <img src="{% static 'images/hz_chat_home.svg' %} " class="position-absolute top-0 end-0" alt="Smiley">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pb-5 d-none d-lg-block">
+                    <div class="carousel-inner alert-info rounded-corner">
+                        <div class="position-relative">
+                            <div>
+                                <div class="p-4">
+                                    <h2 class="mb-1 text-primary fs-5 fw-bold">Happy Customers</h2>
+                                    <p class="m-0 text-primary small">1 Million+ satisfied customers </p>
+                                </div>
+                                <div>
+                                    <div class="carousel-item d-none d-lg-block ">
+                                        <div class="row">
+                                            <div class=" col-lg-3 p-4 py-0">
+                                                <div class="card border-0 alert-info ">
+                                                    <div class="card-body">
+                                                        <div class=" mb-3">
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <!-- <i class="bi bi-star-fill text-muted"></i> -->
+                                                        </div>
+                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" col-lg-3 p-4 py-0">
+                                                <div class="card border-0 alert-info ">
+                                                    <div class="card-body">
+                                                        <div class=" mb-3">
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <!-- <i class="bi bi-star-fill text-muted"></i> -->
+                                                        </div>
+                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" col-lg-3 p-4 py-0">
+                                                <div class="card border-0 alert-info ">
+                                                    <div class="card-body">
+                                                        <div class=" mb-3">
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <!-- <i class="bi bi-star-fill text-muted"></i> -->
+                                                        </div>
+                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" col-lg-3 p-4 py-0">
+                                                <div class="card border-0 alert-info ">
+                                                    <div class="card-body">
+                                                        <div class=" mb-3">
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <i class="bi bi-star-fill rating_star"></i>
+                                                            <!-- <i class="bi bi-star-fill text-muted"></i> -->
+                                                        </div>
+                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                   <img src="{% static 'images/hz_chat_home.svg' %} " class="position-absolute top-0 end-0" alt=" forum background image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                
+          
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- <div class="row">
             <div class="col-lg-5">
-                <!-- {% if products.trending %}     
+                {% if products.trending %}     
                 <div class="hot">Hot</div>
-                {% endif %} -->
+                {% endif %}
             <img src="{{products.product_image.url}}" class="w-100" alt="{{products}}">
             <div class="d-flex justify-content-between mt-3">
                 <button class="btn btn-outline-danger  w-100 btn-lg me-2"><i class="fa fa-heart"></i> WHISLIST</button>
@@ -113,7 +488,7 @@ index | page
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="row">
             <div class="col-12">
                 <h4 class="mb-3"> {{products}} Details</h4>
@@ -159,7 +534,6 @@ index | page
            </div>
             
         </div> -->
-    </div>
 </section>
 <script>
 document.addEventListener("DOMContentLoaded",function(event){

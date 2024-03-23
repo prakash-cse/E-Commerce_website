@@ -4,16 +4,27 @@ index | page
 {% endblock title %}
 
 {% block content %}
-<section class="bg-light py-4 my-5" style="min-height:600px;">
+{% include 'shop/inc/navbar.html' %}
+
+<section class="bg-light">
+    <div class=" text-center py-lg-5 py-4 alert-info">
+        <h1 class="text-primary text-center fw-bold  m-0 ">Home services at your doorstep </h1>
+        <p class="text-primary small text-center mt-2">What are you looking for? </p>
+
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h4 class="mb-3">{{category_name}} products</h4>
-                <hr style="border-color:#b8bfc2">
-                {% include 'shop/inc/message.html' %}
+            <div class="col-lg-12 mt-3">
+                <h3 class="m-0 text-primary fw-bold">{{category_name}} products </h3>
+                <p class="text-muted small">Daily we can update our lates offers !</p>
+    
             </div>
+            <!-- <div class="col-12">
+                <h4 class="mb-3">{{category_name}} products</h4>
+                {% include 'shop/inc/message.html' %}
+            </div> -->
             {% for item in products %}
-            <div class="col-md-4 col-lg-3">
+            <!-- <div class="col-md-4 col-lg-3">
                 <div class="card my-3">
                     <img src="{{item.product_image.url}}" class="card-image-top" alt="Categories">
                     <a href="{% url 'product_details' category_name item.name %}">
@@ -26,7 +37,22 @@ index | page
                     </div>
                     </a>
                 </div>
+            </div> -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card h-100  rounded border-0 shadow-sm ">
+                    <div class="">
+                      <a class="stretched-link" href="{% url 'product_details' item.catagory.name item.name %}">
+                        <img class="img-fluid w-100" src="{{item.product_image.url}}"> </a>
+                    </div>
+                    <div class="card-body alert-info">
+                      <p class="m-0 text-info fw-bold ">{{ item.name }}</p>
+                      <p class="text-primary m-0 fw-bold  small">items descdption goes here</p>
+                      <p class="text-dark m-0 fw-bold">Rs.{{ item.selling_price | stringformat:'d'}} <span class="text-danger text-decoration-line-through  small fw-normal">Rs.{{ item.original_price | stringformat:'d'}}</span></p>
+                    </div>
+                  </div>
             </div>
+
             {% endfor%}
 
             
