@@ -1,0 +1,9 @@
+{% extends "admin_panel/index.html" %}
+{% block content %}
+    <h1>register page</h1>
+    <form method="POST" autocomplete="off">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Register</button>
+    </form>
+{% endblock %}

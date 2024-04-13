@@ -23,10 +23,17 @@ class Product(models.Model):
     name=models.CharField(max_length=150,null=False,blank=False)
     vendor=models.CharField(max_length=150,null=False,blank=False)
     product_image=models.ImageField(upload_to=getFileName,null=True,blank=True)
-    quantity=models.IntegerField(null=False,blank=False)
+    product_image1=models.ImageField(upload_to=getFileName,null=True,blank=True)
+    product_image2=models.ImageField(upload_to=getFileName,null=True,blank=True)
+    product_image3=models.ImageField(upload_to=getFileName,null=True,blank=True)
+    product_image4=models.ImageField(upload_to=getFileName,null=True,blank=True)
+    product_image5=models.ImageField(upload_to=getFileName,null=True,blank=True)
     original_price=models.FloatField(null=False,blank=False)
     selling_price=models.FloatField(null=False,blank=False)
     description=models.TextField(max_length=500,null=False,blank=False)
+    address=models.CharField(max_length=250,null=False,blank=False)
+    phone_no=models.CharField(max_length=50,null=False,blank=True)
+    e_mail=models.CharField(max_length=150,null=False,blank=False)
     status=models.BooleanField(default=False,help_text="0-Show,1-Hidden")
     created_at=models.DateTimeField(auto_now_add=True)
     trending=models.BooleanField(default=False,help_text="0-default,1-Trending")
@@ -49,3 +56,9 @@ class Favourite(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
     created_at=models.DateTimeField(auto_now_add=True)
+    
+
+    
+    
+    
+

@@ -28,19 +28,19 @@ index | page
                                       <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
                                     </div>
                                     <div class="carousel-item cursor-pointer pop" id="pop_2">
-                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                      <img src="{{products.product_image4.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
                                     </div>
                                     <div class="carousel-item cursor-pointer pop" id="pop_3">
-                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                      <img src="{{products.product_image5.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
                                     </div>
                                     <div class="carousel-item cursor-pointer pop" id="pop_4">
-                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                      <img src="{{products.product_image1.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
                                     </div>
                                     <div class="carousel-item cursor-pointer pop active" id="pop_5">
-                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                      <img src="{{products.product_image2.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
                                     </div>
                                     <div class="carousel-item cursor-pointer pop" id="pop_6">
-                                      <img src="{{products.product_image.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
+                                      <img src="{{products.product_image3.url}}" class="w-100" alt="carousel image" style="max-height: 455px; min-height: 455px; object-fit: cover;" >
                                     </div>
                                   </div>
                                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -70,9 +70,8 @@ index | page
                                     </div>
                                     <div class="card-body px-4">
                                         <div class="mt-1">
-                                            <p class="my-1 text-muted small col-10"> 2nd Floor, Flat No: F-3/B,  near Bank of Baroda, Sector 10,   Vashi,
-                                                <br> Navi Mumbai, MAHARASHTRA  - 400703 </p>
-                                           <p class="">  <a href="tel:+919659455455" class="text-decoration-none text-muted small ">+919659455455 | vashi@hearzap.com</a> </p>
+                                            <p class="my-1 text-muted small col-10"> {{products.address}}</p>
+                                           <p class="">  <a href="tel:+919659455455" class="text-decoration-none text-muted small ">{{products.phone_no}}  |  {{products.e_mail}}</a> </p>
                                            <p class="m-0">
                                             <span class="text-success xsmall m-0  fw-bold text-capitalize">Open</span>
                                             <span class="text-muted m-0 xsmall  "><i class="bi bi-dot"></i>Closes By 7 Pm</span>
@@ -83,7 +82,7 @@ index | page
                                         <div class="d-lg-flex justify-content-between">
                                             <div class="d-flex text-center justify-content-center">
                                                 <div class="">
-                                                    <a href="tel:+919659455455">
+                                                    <a href="tel:{{products.phoneno}}">
                                                         <img src="{% static 'images/hz_call_icon.svg' %} " class="mx-3" alt="call icon" >
                                                     </a>
                                                     <p class="text-info text-center m-1 small text-capitalize">Call</p>     
@@ -103,7 +102,7 @@ index | page
                                                 
                                             </div>
                                             <div class="my-auto text-center pt-2 pt-lg-0">
-                                                <a href="" type="button" class="btn btn-info btn-lg text-white w-100">BOOK APPOINTMENT</a>
+                                                <a href="tel:{{products.phoneno}}" type="button" class="btn btn-info btn-lg text-white w-100">BOOK APPOINTMENT</a>
                                             </div>
                                         </div>
         
@@ -164,28 +163,28 @@ index | page
                                  </div>
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hearing Loss Assessments</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Men's Haircut</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Basic Hearing Checkup</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Women's Haircut</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Advanced Audiogram Tests</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Children's Haircut</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Audiologist Consultations</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Speciality Cuts</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Experience Audio Rooms</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Styling</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Shop Hearing Aids/Accessories</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Layered Cuts</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hearing Aids Trials</li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Beard Trimming</li>
                                     </ul>
                                     <ul class="list-group list-group-flush ">
-                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hearing Aids Service </li>
+                                        <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hair Treatments </li>
                                     </ul>
                                 </div>
                             </div>
@@ -197,16 +196,16 @@ index | page
                                 </div>
                                 <div class="card-body">
                                 <ul class="list-group list-group-flush ">
-                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Two Wheeler/Four Wheeler Parkings</li>
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Colouring Service</li>
                                 </ul>
                                 <ul class="list-group list-group-flush ">
-                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Elderly Patients Friendly</li>
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Hair Extension</li>
                                 </ul>
                                 <ul class="list-group list-group-flush ">
-                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Regional Language Speaking Staffs</li>
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Scalp Treatments</li>
                                 </ul>
                                 <ul class="list-group list-group-flush ">
-                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Waiting Periods For Walk-Ins (Max 10 Mins)</li>
+                                    <li class="list-group-item px-0 text-muted py-1 small"><img src="{% static 'images/hz_roundedgreentick_icon.svg' %}" class="mx-2" alt="rounded tick image" >Facial Hair Grooming</li>
                                 </ul>
                             </div>
                         </div>
@@ -217,28 +216,28 @@ index | page
             <div class="container">
                     <div class="row  mt-lg-4 mt-3">
                         <div class="col-lg-8 pe-0">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.749385224737!2d103.70579077567913!3d1.3263142616495764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da055f8fffffff%3A0x75d06febe3272878!2sUTOC%20Engineering%20Pte%20Ltd!5e0!3m2!1sen!2ssg!4v1711181919215!5m2!1sen!2ssg" width="850" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.664207201865!2d76.83771607451976!3d10.988698555243497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f735e5abd83%3A0x3e659d1132693dfd!2sAddicit%20Beauty%20salon%20for%20women%20%26%20kits!5e0!3m2!1sen!2sin!4v1712496788243!5m2!1sen!2sin" width="725" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="col-lg-4  ps-lg-0">
                             <div class="card alert-info shadow-sm border-0 rounded-3 position-relative">
                                 <div class="card-body p-4">
                                     <h2 class="text-primary fs-5 fw-bold  text-center text-capitalize">Book your store visit</h2>
                                     <div class="py-3">
-                                        <p class="mb-1 fw-bold text-info ">VASHI</p>
+                                        <p class="mb-1 fw-bold text-info ">{{products.vendor}}</p>
                                         <p class="m-0 small text-muted ">
-                                            2nd Floor, Flat No: F-3/B near Bank of Baroda, Sector 10  Navi Mumbai - MAHARASHTRA - 400703
+                                           {{products.address}}
                                         </p>
                                         <p class="pt-3 m-0">
-                                            <a href="tel:+919659455455" class="text-decoration-none text-muted small  ">+919659455455</a>
+                                            <a href="tel:+919659455455" class="text-decoration-none text-muted small  ">{{products.phone_no}}</a>
                                            </p>
                                            <p class="m-0">
-                                            <a href="mailto:vashi@ss.com" class="text-decoration-none text-muted small  ">vashi@sss.com</a>
+                                            <a href="mailto:vashi@ss.com" class="text-decoration-none text-muted small  ">{{products.e_mail}}</a>
                                            </p>
                                     </div>
                                     <img src="{% static 'images/hz_rightleaf_icon.svg' %} " class="position-absolute top-0 end-0" alt="right curve" >
                                     <img src="{% static 'images/hz_leftleaf_icon.svg' %} " class="position-absolute top-0 end-0" alt="left curve" >
                                     <div class="d-grid gap-2">
-                                        <a href="" type="button" class="btn btn-info text-white fw-bold mt-3">BOOK APPOINTMENT</a>
+                                        <a href="tel:{{products.phoneno}}" type="button" class="btn btn-info text-white fw-bold mt-3">BOOK APPOINTMENT</a>
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +271,7 @@ index | page
                                                 <i class="bi bi-star-fill rating_star"></i>
                                             </div>
                                             <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
-                                            <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                            <p class="text-primary py-2 small fw-bold">Prithvi .V.P</p>
                                         </div>
                                     </div>
                                     
@@ -304,8 +303,8 @@ index | page
                                                             <i class="bi bi-star-fill rating_star"></i>
                                                             <!-- <i class="bi bi-star-fill text-muted"></i> -->
                                                         </div>
-                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
-                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                        <p class="text-primary m-0 small">“ Excellent hospitality!! Hygiene-friendly salon!! and what not... Enjoyed my time there in an efficient and productive way! Thanks to Addict beauty salon...😍😍😍 “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Prithvi .V.P</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -320,8 +319,9 @@ index | page
                                                             <i class="bi bi-star-fill rating_star"></i>
                                                             <!-- <i class="bi bi-star-fill text-muted"></i> -->
                                                         </div>
-                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
-                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                        <p class="text-primary m-0 small">“ Positive: Cleanliness, Professionalism, Quality, Value
+                                                            Good service, Nice bridal make over for my relation marriage “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Ravi chandran</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -336,8 +336,8 @@ index | page
                                                             <i class="bi bi-star-fill rating_star"></i>
                                                             <!-- <i class="bi bi-star-fill text-muted"></i> -->
                                                         </div>
-                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
-                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                        <p class="text-primary m-0 small">“ It was beyond satisfaction ✌️ “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Kavitha Kuppuraj</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,8 +352,8 @@ index | page
                                                             <i class="bi bi-star-fill rating_star"></i>
                                                             <!-- <i class="bi bi-star-fill text-muted"></i> -->
                                                         </div>
-                                                        <p class="text-primary m-0 small">“ We had a wonderful experience with the store when I went to collect the information for the hearing care devices “</p>
-                                                        <p class="text-primary py-2 small fw-bold">Purushothkumar K</p>
+                                                        <p class="text-primary m-0 small">“ I had the most incredible experience at Luxe Locks! From the moment I stepped in, I felt like royalty. “</p>
+                                                        <p class="text-primary py-2 small fw-bold">Rajesh Srinivasan</p>
                                                     </div>
                                                 </div>
                                             </div>

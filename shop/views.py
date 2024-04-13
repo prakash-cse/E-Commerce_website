@@ -133,3 +133,4 @@ def product_details(request,cname,pname):
     else:
         messages.error(request,"No Such Catagory Found")
         return redirect('collections')
+    
