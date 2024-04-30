@@ -17,11 +17,21 @@ class Catagory(models.Model):
 
     def __str__(self):
         return self.name
+
+class shopname(models.Model):
+     catagory=models.ForeignKey(Catagory,on_delete=models.CASCADE)
+     shop_name=models.CharField(max_length=150,null=False,blank=False)
+     shop_image=models.ImageField(upload_to=getFileName,null=True,blank=True)
+     
+     def __str__(self):
+        return self.shop_name
+     
      
 class Product(models.Model):
     catagory=models.ForeignKey(Catagory,on_delete=models.CASCADE)
     name=models.CharField(max_length=150,null=False,blank=False)
     vendor=models.CharField(max_length=150,null=False,blank=False)
+    shop_name=models.ForeignKey(shopname,on_delete=models.CASCADE)
     product_image=models.ImageField(upload_to=getFileName,null=True,blank=True)
     product_image1=models.ImageField(upload_to=getFileName,null=True,blank=True)
     product_image2=models.ImageField(upload_to=getFileName,null=True,blank=True)
@@ -41,22 +51,9 @@ class Product(models.Model):
     def __str__(self):
         return self.name
     
-class Cart(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE)
-    product=models.ForeignKey(Product,on_delete=models.CASCADE)
-    product_qty=models.IntegerField(null=False,blank=False)
-    created_at=models.DateTimeField(auto_now_add=True)
 
-    @property
-    def total_cost(self):
-        return self.product_qty*self.product.selling_price
-    
 
-class Favourite(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE)
-    product=models.ForeignKey(Product,on_delete=models.CASCADE)
-    created_at=models.DateTimeField(auto_now_add=True)
-    
+
 
     
     

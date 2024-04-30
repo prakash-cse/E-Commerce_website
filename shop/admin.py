@@ -12,4 +12,4 @@ admin.site.register(Catagory,CategoryAdmin)
 
 admin.site.register(Catagory)
 admin.site.register(Product)
-
+admin.site.register(shopname)

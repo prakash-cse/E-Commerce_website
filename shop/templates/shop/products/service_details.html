@@ -111,6 +111,19 @@ index | page
                         </div>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm rounded-3 h-100">
+                            <div class="card-header bg-white">
+                                <p class="text-primary fs-5 fw-bold mb-1">About Us</p>
+                            </div>
+                            <div class="card-body pe-0 ps-2">
+                                <p class="text-muted m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum dolor at! Inventore, molestias voluptate facere corporis dicta excepturi cupiditate error optio. Saepe maiores vel minus velit iusto dignissimos blanditiis.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="">
                     <div class="row row-cols-1 row-cols-lg-3 mt-4">
                         <div class="col">
@@ -216,7 +229,7 @@ index | page
             <div class="container">
                     <div class="row  mt-lg-4 mt-3">
                         <div class="col-lg-8 pe-0">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.664207201865!2d76.83771607451976!3d10.988698555243497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f735e5abd83%3A0x3e659d1132693dfd!2sAddicit%20Beauty%20salon%20for%20women%20%26%20kits!5e0!3m2!1sen!2sin!4v1712496788243!5m2!1sen!2sin" width="725" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.664207201865!2d76.83771607451976!3d10.988698555243497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f735e5abd83%3A0x3e659d1132693dfd!2sAddicit%20Beauty%20salon%20for%20women%20%26%20kits!5e0!3m2!1sen!2sin!4v1712496788243!5m2!1sen!2sin" width="725" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="col-lg-4  ps-lg-0">
                             <div class="card alert-info shadow-sm border-0 rounded-3 position-relative">
@@ -383,157 +396,7 @@ index | page
 
 
         
-        <!-- <div class="row">
-            <div class="col-lg-5">
-                {% if products.trending %}     
-                <div class="hot">Hot</div>
-                {% endif %}
-            <img src="{{products.product_image.url}}" class="w-100" alt="{{products}}">
-            <div class="d-flex justify-content-between mt-3">
-                <button class="btn btn-outline-danger  w-100 btn-lg me-2"><i class="fa fa-heart"></i> WHISLIST</button>
-                <button class="btn btn-info text-white w-100 btn-lg">BOOK NOW</button>
-            </div>
-            
-            </div>
-            <div class="col-lg-7">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="">
-                            <p class="m-0 text-info ">{{products | upper}}</p>
-                            <h1 class="text-primary fw-bold fs-4 m-0">{{products.vendor}}</h1>
-                            <hr class="border">
-                            <p class="m-0 text-warning fw-bold fs-4">Rs.{{products.selling_price}} <span class="fs-6 fw-normal small text-muted mx-1 text-decoration-line-through">Rs.{{products.original_price}}</span> </p>
-                            <p class="small text-muted">(inclusive of all taxes)</p>
-                        </div>
-                        <div class="card border rounded-3 mt-4 bg-light">
-                            <div class="card-body">
-                                <div class="row  justify-content-center">
-                                    <div class="col-4 text-center my-auto border-end">
-                                        <i class="bi bi-check-circle fs-3"></i>
-                                       <p class="m-0 text-primary small">Easy Book</p>
-                                    </div>
-                                    <div class="col-4 text-center my-auto border-end">
-                                        <i class="bi bi-people-fill fs-3"></i>
-                                       <p class="m-0 text-primary small">Trust ours</p>
-                                    </div>
-                                    <div class="col-4 text-center my-auto">
-                                        <i class="bi bi-cash-coin fs-3"></i>
-                                        <p class="m-0 text-primary small">Easy refund</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card border  mt-3">
-                            <div class="card-header bg-white">
-                                <p class=" text-primary  fw-bold m-0" id="">Product Description</p>
-                            </div>
-                              <div class="card-body">
-                                  <div class="text-muted "><p>{{products.description}}</p></div>
-                              </div>
-                          </div>
-                          <div class="card border  mt-3">
-                            <div class="card-header bg-white">
-                                <p class=" text-primary  fw-bold m-0" id="">Shop  Address</p>
-                            </div>
-                              <div class="card-body">
-                                  <div class="text-muted "><p>{{products.description}}</p></div>
-                              </div>
-                          </div>
-                          <div class="card border  mt-3 ">
-                            <div class="card-header bg-white">
-                                <p class="text-primary  fw-bold m-0 " id="">Package</p>
-                            </div>
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush ">
-                             
-                             <li class="list-group-item border-light">
-                                 <div class="row">
-                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">Hair Cut</p>
-                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
-                                         Yes
-                                     </p>
-                                 </div>
-                             </li>
-                             
-                             <li class="list-group-item border-light">
-                                 <div class="row">
-                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">face Wash</p>
-                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
-                                         Yes
-                                     </p>
-                                 </div>
-                             </li>
-                             
-                             <li class="list-group-item border-light">
-                                 <div class="row">
-                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">Head massage</p>
-                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
-                                         No
-                                     </p>
-                                 </div>
-                             </li>
-                             
-                             <li class="list-group-item border-light">
-                                 <div class="row">
-                                     <p class="m-0 p-0 text-muted  col-7 col-lg-7">Hair Wash</p>
-                                     <p class="m-0 p-0 text-muted  col-5 col-lg-5"> 
-                                         Yes
-                                     </p>
-                                 </div>
-                             </li>
-                              
-                         </ul>
-                     </div>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="row">
-            <div class="col-12">
-                <h4 class="mb-3"> {{products}} Details</h4>
-                <hr style="border-color:#b8bfc2">
-            </div>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                  <li class="breadcrumb-item"><a href="{% url 'collections' products.catagory.name %}">Collection</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">{{products}}</li>
-                </ol>
-              </nav>
-              {% include 'shop/inc/message.html' %}
-           <div class="col-4 my-3 pic-box">
-                {% if products.trending %}     
-                <div class="hot">Hot</div>
-                {% endif %}
-            <img src="{{products.product_image.url}}" class="card-image-top" alt="{{products}}">
-           </div>
-           <div class="col-8 my-3">
-                <h5 class="text-success">{{products | upper}}</h5>
-                <p>{{products.vendor}}</p>
-                <p>{{products.description}}</p>
-                <h6 class="my-2 text-danger">Current Price : Rs. <s>{{products.original_price}}</s></h6>
-                <h5 class="my-2 text-primary">Offer Price : Rs.{{products.selling_price}}</h5>
-                <div class="my-3">
-                    {% if products.quantity > 0 %}
-                    <input type="hidden" value="{{products.id}}" id="pid">
-                    {% csrf_token %}
-                    <p>
-                        <div class="input-group" style="width:150px;">
-                            <button class="input-group-text bg-success text-light" id="btnMinus"><i class="fa fa-minus"></i></button>
-                                <input type="text" name="qty" id="txtQty" value="1" class="form-control text-center">
-                            <button class="input-group-text bg-success text-light" id="btnPlus"><i class="fa fa-plus"></i></button>
-                        </div>
-                    </p>
-                    <button class="btn btn-primary" id="btnCart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-                    {% else %}
-                    <button class="btn btn-secondary"><i class="fa fa-minus"></i> Out of Stock</button>
-                    {% endif %}
-                    <button class="btn btn-danger" id="btnFav"><i class="fa fa-heart"></i></button>
-                </div> 
-           </div>
-            
-        </div> -->
+     
 </section>
 <script>
 document.addEventListener("DOMContentLoaded",function(event){
