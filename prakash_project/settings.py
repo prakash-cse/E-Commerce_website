@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'prakash_project.wsgi.application'
 #         'NAME': 'shopkart_project', #db name
 #         'USER': 'root',
 #         'PASSWORD': 'Secret@123',
-#         'HOST': 'UTOC-NB-229',
+#         'HOST': '127.0.0.1',
 #         'PORT': '3306',
 #     }
 # }
