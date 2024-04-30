@@ -57,6 +57,8 @@ class Favourite(models.Model):
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
     created_at=models.DateTimeField(auto_now_add=True)
     
+class summa(models.Model):
+    name=models.CharField(max_length=150,null=False,blank=False)
 
     
     
