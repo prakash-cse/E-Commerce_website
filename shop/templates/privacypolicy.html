@@ -1,0 +1,58 @@
+{% extends 'shop/layouts/main.html' %}
+{% load static %}
+{% block title %}
+idex | page
+{% endblock title %}
+
+{% block content %}
+<style>
+    .light-sky-blue {
+    background-color: #DEEFFF !important;
+}
+
+.fix--top {
+    top: -60px;
+}
+</style>
+{% include 'shop/inc/navbar.html' %}
+<div class="main m--lg--banner">
+    <div class="light-sky-blue p-0 py-5" style="overflow: hidden;">
+        <div class="container position-relative py-5">
+            <img src="{% static 'images/hz_rightbottomleaf.webp' %}" class="position-absolute top-0 end-0" alt="double-circle-top-right">
+            <div class="position-relative">
+                <h1 class="text-primary text-center fw-bold m-0">Company Terms &amp; Conditions</h1>
+                <!-- <h2 class="text-primary text-center fs-6">HEARZAP Version: 2.0 (PRD)</h2> -->
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class=" d-lg-none ">
+            <div class="bg-primary fixed-top">
+    <p class="m-0 text-center py-3 text-white">
+        <a href="/"><img src="" class="" alt=""></a>
+     </p>
+  <a onclick="history.back()">
+    <img src="" class="position-absolute top-0 start-0 m-3" alt=""></a>
+</div>
+        </div>
+        <div class="position-relative fix--top mx-2">
+            <div class="container rounded-3">
+                <div class="row">
+                    <div class="col-lg-10 col-sm-12 p-0 mx-auto">
+                        <div class="pb-5 mb-5">
+                            <div class="card shadow-sm p-0 rounded-3 border-0">
+                                <div class="card-body text-muted p-lg-5">
+                                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium neque ad sapiente reiciendis veritatis temporibus cupiditate explicabo voluptate non voluptas? Accusamus rem laudantium corporis dicta repudiandae, ratione exercitationem ipsa fugiat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+   
+   

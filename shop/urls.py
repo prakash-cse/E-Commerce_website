@@ -9,5 +9,8 @@ urlpatterns= [
     path('collections',views.collections,name="collections"),
     path('service/<int:id>',views.service,name="service"),
     path('collections/<str:cname>/<str:pname>',views.service_details,name="service_details"),
-    path('shopname/<int:id>',views.shop_name,name="shopname")
+    path('shopname/<int:id>',views.shop_name,name="shopname"),
+    path('support',views.support,name="support"),
+    path('termsofuse',views.termsofuse,name="termsofuse")
+
 ]

@@ -1,6 +1,113 @@
 {% extends 'shop/layouts/main.html' %}
+{% load static %}
+{% block header %}
+<style>
+    .bg-img{
+       background-image: url({% static 'images/Untitled dssesign.png' %});
+       background-size: cover; 
+       background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+
+}
+    .centered-div {
+            /* text-align: center;  */
+            margin-top: 100px; /* Adjust top margin as needed */
+        }
+    
+</style>
+{% endblock %}
 {% block content %}
-<div class="container" style="margin-top:70px;">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand" href="{% url 'home' %}">LOGO</a>
+    </div>
+  </nav>
+<div class="bg-img h-100">
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mb-3">User Signup</h4>
+                <hr style="border-color: #b8bfc2;">
+                {% include 'shop/inc/message.html' %}
+            </div>
+        </div> 
+        <section class="py-4 my-5 ">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 centered-div"> 
+                      
+                        <div class="card shadow-sm rounded-3  border-0 ">
+                            <div class="card-body p-lg-5">
+                              <p class="fs-4 text-primary fw-bold pb-3 m-0  text-capitalize text-center">Signup</p>
+                              <form method="post" action="">
+                                {% csrf_token %}
+                                <div class="mb-4">
+                                    <label for="" class="text-start  m-0 text-primary  from-label">User Name</label>
+                                    {{form.username}}
+                                    {% if form.errors.username %}
+                                        <label class="text-danger">{{ form.errors.username }}</label>
+                                    {% endif %}    
+                                </div>
+                                <div class="mb-4">
+                                    <label for="" class="text-start  m-0 text-primary  from-label">User Email</label>
+                                    {{form.email}}
+                                    {% if form.errors.email %}
+                                        <label class="text-danger">{{ form.errors.email }}</label>
+                                    {% endif %}    
+                                </div>
+                                <div class="mb-4">
+                                    <label for="" class="text-start  m-0 text-primary  from-label">Password</label>
+                                    {{form.password1}}
+                                    {% if form.errors.password1 %}
+                                        <label class="text-danger">{{ form.errors.password1 }}</label>
+                                    {% endif %}    
+                                </div>
+                                <div class="mb-4">
+                                    <label for="" class="text-start  m-0 text-primary  from-label">Confirm Password</label>
+                                    {{form.password2}}
+                                    {% if form.errors.password2 %}
+                                        <label class="text-danger">{{ form.errors.password2 }}</label>
+                                    {% endif %}    
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Register</button>
+                            </form>
+                              <p class="text-muted m-0 small m-0 pt-4 text-center pb-2">Already user ? <a href="{% url 'login' %}" class="text-info text-decoration-none">Login Now</a> </p>
+                            </div>
+                    
+                          </div>
+                    </div>
+                </div>
+            </div>
+    
+                        
+
+                                <!-- <form method="post" action="">
+                                    {% csrf_token %}
+                                    <div class="mb-4">
+                                        <label for="" class="from-label">User Name</label>
+                                        <input type="text" name="username" id="username" class="from-control" placeholder="Enter User Nmae">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="" class="from-label">Password</label>
+                                        <input type="password" name="password" id="password" class="from-control" placeholder="Enter Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </form> -->
+                             
+                
+        </section>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="container" style="margin-top:70px;">
     <div class="row">
         <div class="col-12">
             <h4 class="mb-3">Register Page</h4>
@@ -11,44 +118,50 @@
     <section class="py-4 my-5">
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <form method="post" action="">
-                        {% csrf_token %}
-                        <div class="mb-4">
-                            <label for="" class="form-label">User Name</label>
-                            {{form.username}}
-                            {% if form.errors.username %}
-                                <label class="text-danger">{{ form.errors.username }}</label>
-                            {% endif %}    
-                        </div>
-                        <div class="mb-4">
-                            <label for="" class="form-label">User Email</label>
-                            {{form.email}}
-                            {% if form.errors.email %}
-                                <label class="text-danger">{{ form.errors.email }}</label>
-                            {% endif %}    
-                        </div>
-                        <div class="mb-4">
-                            <label for="" class="form-label">Password</label>
-                            {{form.password1}}
-                            {% if form.errors.password1 %}
-                                <label class="text-danger">{{ form.errors.password1 }}</label>
-                            {% endif %}    
-                        </div>
-                        <div class="mb-4">
-                            <label for="" class="form-label">Confirm Password</label>
-                            {{form.password2}}
-                            {% if form.errors.password2 %}
-                                <label class="text-danger">{{ form.errors.password2 }}</label>
-                            {% endif %}    
-                        </div>
-                        <button type="submit" class="btn btn-primary">Register</button>
-                    </form>
-                    <p class="my-2">Already user ? <a href="{% url 'login' %}">Login Now</a></p>
+                <div class="col-lg-12">
+                    <div class="card border-0 rounded-3 border-0 shadow-sm ">
+                      <div class="card-body">
+                          <div class="col-6">
+                              <form method="post" action="">
+                                  {% csrf_token %}
+                                  <div class="mb-4">
+                                      <label for="" class="form-label">User Name</label>
+                                      {{form.username}}
+                                      {% if form.errors.username %}
+                                          <label class="text-danger">{{ form.errors.username }}</label>
+                                      {% endif %}    
+                                  </div>
+                                  <div class="mb-4">
+                                      <label for="" class="form-label">User Email</label>
+                                      {{form.email}}
+                                      {% if form.errors.email %}
+                                          <label class="text-danger">{{ form.errors.email }}</label>
+                                      {% endif %}    
+                                  </div>
+                                  <div class="mb-4">
+                                      <label for="" class="form-label">Password</label>
+                                      {{form.password1}}
+                                      {% if form.errors.password1 %}
+                                          <label class="text-danger">{{ form.errors.password1 }}</label>
+                                      {% endif %}    
+                                  </div>
+                                  <div class="mb-4">
+                                      <label for="" class="form-label">Confirm Password</label>
+                                      {{form.password2}}
+                                      {% if form.errors.password2 %}
+                                          <label class="text-danger">{{ form.errors.password2 }}</label>
+                                      {% endif %}    
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Register</button>
+                              </form>
+                              <p class="my-2">Already user ? <a href="{% url 'login' %}">Login Now</a></p>
+                          </div>
+                      </div>
+                      </div>
                 </div>
             </div>
         </div>
     </section>
-</div>
+</div> -->
 {% endblock %}
    

@@ -70,5 +70,9 @@ def shop_name(request,id):
     shop = shopname.objects.filter(catagory_id=id)
     return render(request,"shop/products/shopname.html",{'shop':shop}) 
    
-    
+def support(request):
+    return render (request,'support.html')    
+
+def termsofuse(request):
+    return render (request,'termsofuse.html')   
    

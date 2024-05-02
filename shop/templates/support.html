@@ -1,0 +1,106 @@
+{% extends 'shop/layouts/main.html' %}
+{% load static %}
+{% block title %}
+idex | page
+{% endblock title %}
+
+{% block content %}
+<style>
+    .fix--top {
+    top: -60px;
+}
+</style>
+{% include 'shop/inc/navbar.html' %}
+<div class="main m--lg--banner">
+    <div class="position-relative">
+        <div class="alert-info p-0 py-5">
+            <div class="container">
+                <div class="position-relative pt-5 pt-lg-0">
+                    <h1 class="text-primary text-center fw-bold  m-0">Company Support </h1>
+                    <h2 class="text-primary text-center fs-6">Having hearing problems and looking for assistance?</h2>
+                    <img class="img-fluid mx-auto d-block" src="{% static 'images/hz_support_mainbanner.svg' %}" alt="supporthz">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class=" d-lg-none ">
+            <div class="bg-primary fixed-top">
+    <p class="m-0 text-center py-3 text-white">
+        <a href="/"><img src="" class="" alt=""></a>
+     </p>
+  <a onclick="history.back()">
+    <img src="" class="position-absolute top-0 start-0 m-3" alt=""></a>
+</div>
+        </div>
+        <div class="position-relative fix--top mx-2">
+            <div class="container rounded-3">
+                <div class="row px-lg-5">
+                    <div class="col-lg-4 col-sm-12 p-0 px-lg-2 mb-3">
+                        <div class="card border border-0 rounded-3 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <img src="{% static 'images/hz_coupon_icon.svg' %}" alt="coustmer-care-img">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div style="min-height:74px ;">
+                                            <p class="text-primary fw-bold fs-5 m-0 mt-2">Call Us</p>
+                                            <p class="text-muted small m-0">Please call us on <b>+91 96594 55455 </b> </p>
+
+                                        </div>
+                          
+                                        <a href="tel:+91 96594 55455" type="button" class=" text-decoration-none btn btn-info text-white my-2">CALL NOW <i class="bi bi-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 p-0 px-lg-2 mb-3">
+                        <div class="card border border-0 rounded-3 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <img src="{% static 'images/hz_whatsappblue_icon.webp' %}" alt="whatsapp-img">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div style="min-height:74px ;">
+                                        <p class="text-primary fw-bold m-0 mt-2 fs-5">WhatsApp</p>
+                                        <p class="text-muted small m-0">Talk to us through our whatsapp</p>
+                                        </div>
+                                        <a target="_blank" href="" type="button" class=" text-decoration-none btn btn-info my-2 text-white">CHAT NOW <i class="bi bi-chevron-right"></i></a>
+                                        <!-- <a href="tel:919659455455" type="button" class="btn-sm text-decoration-none btn btn-info my-2 text-white">CHAT NOW <i
+                                        class="bi bi-chevron-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 p-0 px-lg-2 mb-3">
+                        <div class="card border border-0 rounded-3 shadow-sm  h-100">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <img src="{% static 'images/hz_chatandsupport_icon.webp' %}" alt="chatsupport-img">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div style="min-height:74px ;">
+                                        <p class="text-primary fw-bold m-0 mt-2 fs-5">Support Desk</p>
+                                        <p class="text-muted small m-0">We will respond back within 24 hours</p>
+                                        </div>
+                                        <a href="mailto:support@hearzap.com" type="button" class=" text-decoration-none btn btn-info text-white my-2">EMAIL US
+                                            <i class="bi bi-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+   
+   
